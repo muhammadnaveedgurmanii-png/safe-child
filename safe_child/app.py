@@ -531,7 +531,7 @@ def navrow():
         ("categories", "اسکریننگ", "Screening"),
         ("filing", "رپورٹ درج کریں", "File report"),
         ("report", "اسکریننگ نتیجہ", "Screening result"),
-        ("resources", "مدد", "Resources"),
+        ("resources", "مدد", "Help"),
         ("history", "My Reports", "My Reports"),
     ]
     return rx.box(
@@ -602,7 +602,7 @@ def bottomnav():
         ("categories", "clipboard-list", "اسکریننگ", "Screening"),
         ("filing", "file-text", "رپورٹ", "Report"),
         ("resources", "life-buoy", "مدد", "Help"),
-        ("history", "folder", "My Reports", "My Reports"),
+        ("history", "folder", "میری رپورٹس", "My Reports"),
     ]
     return rx.box(
         *[
@@ -750,9 +750,8 @@ def categories_view():
                 class_name="sc-agepills",
             ),
             rx.el.p(
-                rx.el.span(State.done_count),
-                " / 6 ",
-                T("کیٹیگریز مکمل", "categories done"),
+                State.done_count.to_string() + " / 6 "
+                + T("کیٹیگریز مکمل", "categories done"),
                 style={"font_size": "12.5px", "color": "var(--muted)",
                        "margin_top": "8px"}),
             class_name="sc-sec",
@@ -989,8 +988,7 @@ def case_review():
                     rx.cond(
                         State.a_photo != "",
                         rx.image(src=rx.get_upload_url(State.a_photo)),
-                        rx.box(rx.icon("user", size=26),
-                               rx.el.b(T("ملزم", "MULZIM"))),
+                        rx.box(rx.icon("user", size=26)),
                     ),
                     rx.el.div(T("ملزم", "MULZIM"),
                               style={"font_size": "12px", "font_weight": "700",
@@ -1001,8 +999,7 @@ def case_review():
                     rx.cond(
                         State.c_photo != "",
                         rx.image(src=rx.get_upload_url(State.c_photo)),
-                        rx.box(rx.icon("user", size=26),
-                               rx.el.b(T("متاثرہ", "MUTASIRA"))),
+                        rx.box(rx.icon("user", size=26)),
                     ),
                     rx.el.div(T("متاثرہ", "MUTASIRA"),
                               style={"font_size": "12px", "font_weight": "700",
@@ -1039,7 +1036,7 @@ def filing_actions():
         ),
         rx.box(
             rx.link(T("FIA سائبر کرائم پورٹل", "FIA Cybercrime Portal"),
-                    href="https://www.fia.gov.pk", is_external=True,
+                    href="https://complaint.fia.gov.pk", is_external=True,
                     class_name="sc-call alt"),
             rx.link(T("پنجاب پولیس", "Punjab Police"),
                     href="https://punjabpolice.gov.pk", is_external=True,
@@ -1107,10 +1104,12 @@ def report_view():
             demo_note(),
             rx.cond(
                 State.res_critical,
-                rx.box(
+                rx.link(
                     rx.el.b(T("فوری توجہ: بچے کی حفاظت پہلے — 1121 پر کال کریں",
                               "Urgent: child's safety first — call 1121")),
+                    href="tel:1121",
                     class_name="sc-critical",
+                    style={"display": "block", "text_decoration": "none"},
                 ),
                 rx.fragment(),
             ),
@@ -1220,7 +1219,7 @@ def resources_view():
             rx.box(
                 rx.link(rx.icon("phone-call", size=16), rx.text("1991"),
                         href="tel:1991", class_name="sc-call alt"),
-                rx.link(T("fia.gov.pk", "fia.gov.pk"), href="https://www.fia.gov.pk",
+                rx.link(T("complaint.fia.gov.pk", "complaint.fia.gov.pk"), href="https://complaint.fia.gov.pk",
                         is_external=True, class_name="sc-call alt"),
                 class_name="sc-callrow",
             ),
