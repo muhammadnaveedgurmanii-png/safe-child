@@ -83,7 +83,10 @@ def serve():
     sys.path.insert(0, "/app")
 
     # Mirror what `reflex run --env prod` sets up, minus the server itself.
-    from reflex import constants, environment
+    # NOTE: `environment` must be the EnvironmentVariables *instance* from
+    # reflex_base, not the `reflex.environment` module (Reflex 0.9.x).
+    from reflex import constants
+    from reflex_base.environment import environment
 
     environment.REFLEX_ENV_MODE.set(constants.Env.PROD)
     environment.REFLEX_MOUNT_FRONTEND_COMPILED_APP.set(True)
