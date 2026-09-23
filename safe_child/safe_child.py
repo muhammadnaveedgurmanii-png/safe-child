@@ -20,6 +20,32 @@ app = rx.App(
         ),
         rx.el.link(rel="manifest", href="/manifest.webmanifest"),
         rx.el.meta(name="theme-color", content="#2AA89B"),
+        rx.el.meta(property="og:title", content="Safe Child — Child Safety Pakistan"),
+        rx.el.meta(
+            property="og:description",
+            content="Parent-facing child safety web app: adaptive behavioral screening and formal abuse-report case-file preparation. Urdu + English. Report abuse — call 1121.",
+        ),
+        rx.el.meta(property="og:type", content="website"),
+        rx.el.meta(
+            property="og:url",
+            content="https://muhammadnaveedgurmanii-png--safe-child.modal.run/",
+        ),
+        rx.el.meta(
+            property="og:image",
+            content="https://muhammadnaveedgurmanii-png--safe-child.modal.run/og-cover.png",
+        ),
+        rx.el.meta(property="og:image:width", content="1200"),
+        rx.el.meta(property="og:image:height", content="627"),
+        rx.el.meta(name="twitter:card", content="summary_large_image"),
+        rx.el.meta(name="twitter:title", content="Safe Child — Child Safety Pakistan"),
+        rx.el.meta(
+            name="twitter:description",
+            content="Parent-facing child safety web app: adaptive behavioral screening and formal abuse-report case-file preparation. Urdu + English.",
+        ),
+        rx.el.meta(
+            name="twitter:image",
+            content="https://muhammadnaveedgurmanii-png--safe-child.modal.run/og-cover.png",
+        ),
         rx.el.link(
             rel="icon",
             href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232AA89B'/><path d='M32 12l14 5v10c0 9-6 16-14 19-8-3-14-10-14-19V17z' fill='white'/><path d='M26 32l5 5 11-11' stroke='%232AA89B' stroke-width='4' fill='none' stroke-linecap='round'/></svg>",
