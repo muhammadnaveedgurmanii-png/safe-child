@@ -1,4 +1,18 @@
-# Safe Child — Child Safety Pakistan
+# 🛡️ Safe Child — Child Safety Pakistan
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Reflex](https://img.shields.io/badge/Reflex-0D9488?style=flat-square&logo=python&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
+![Urdu & English](https://img.shields.io/badge/Urdu_%7C_English-1E6F5C?style=flat-square)
+![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
+
+**[🔴 Live App](https://muhammadnaveedgurmanii-png--safe-child.modal.run)**
+
+*Every child deserves to feel safe.*
+
+</div>
 
 One app, two modules:
 
@@ -16,6 +30,20 @@ One app, two modules:
 
 100% Python via [Reflex](https://reflex.dev) — no handwritten JavaScript.
 Urdu (RTL, Noto Nastaliq Urdu) + English, dark mode, mobile-first.
+
+## 📸 Screenshots
+
+| Home | Screening Categories |
+|---|---|
+| ![Home](docs/screenshots/home.png) | ![Categories](docs/screenshots/categories.png) |
+
+| Screening Question | Results & Action Plan |
+|---|---|
+| ![Question](docs/screenshots/question.png) | ![Results](docs/screenshots/results.png) |
+
+| Case-File Wizard |
+|---|
+| ![Report wizard](docs/screenshots/report.png) |
 
 ## Stack (100% free)
 
