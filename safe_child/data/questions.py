@@ -21,7 +21,7 @@ CATEGORIES = [
     {"key": "mood", "ur": "موڈ و جذبات", "en": "Mood & Feelings", "icon": "heart"},
     {"key": "behavior", "ur": "رویہ", "en": "Behavior", "icon": "users"},
     {"key": "school", "ur": "اسکول", "en": "School", "icon": "book"},
-    {"key": "physical", "ur": "جسمانی نشانات", "en": "Physical Signs", "icon": "alert"},
+    {"key": "physical", "ur": "جسمانی نشانات", "en": "Physical Signs", "icon": "triangle-alert"},
 ]
 
 ANSWER_LABELS = {
