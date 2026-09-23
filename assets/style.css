@@ -84,8 +84,14 @@
 .sc-root .sc-agepills{display:flex; gap:8px; margin-bottom:14px;}
 .sc-root .sc-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
 .sc-root .sc-cat{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:16px 12px; cursor:pointer;
-  display:flex; flex-direction:column; align-items:flex-start; height:auto;
+  display:flex; flex-direction:column; align-items:flex-start;
   text-align:start; color:var(--ink); box-shadow:var(--shadow); transition:transform .15s;}
+
+/* Radix themes gives every rx.button a fixed 32px height (rt-r-size-2 default).
+   Neutralize it on all custom Safe Child buttons so they size to their content. */
+.sc-root .sc-cat, .sc-root .sc-card, .sc-root .sc-opt, .sc-root .sc-btn,
+.sc-root .sc-pill, .sc-root .sc-tab, .sc-root .sc-navbtn, .sc-root .sc-type,
+.sc-root .sc-iconbtn, .sc-root .sc-back{height:auto;}
 .sc-root .sc-cat:hover{transform:translateY(-2px);}
 .sc-root .sc-cat .ic{width:44px; height:44px; border-radius:13px; background:var(--soft); color:var(--teal);
   display:flex; align-items:center; justify-content:center; margin-bottom:10px;}
