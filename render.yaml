@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: safe-child
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt && reflex init"
+    startCommand: "reflex run --env prod"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
