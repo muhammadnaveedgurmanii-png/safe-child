@@ -24,4 +24,5 @@ COPY . .
 
 EXPOSE 7860
 
-CMD ["reflex", "run", "--env", "prod", "--frontend-port", "7860"]
+# Koyeb/Render inject $PORT at runtime; default 7860 (HF Spaces convention).
+CMD ["sh", "-c", "reflex run --env prod --frontend-port ${PORT:-7860}"]
