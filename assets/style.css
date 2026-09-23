@@ -84,6 +84,7 @@
 .sc-root .sc-agepills{display:flex; gap:8px; margin-bottom:14px;}
 .sc-root .sc-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
 .sc-root .sc-cat{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:16px 12px; cursor:pointer;
+  display:flex; flex-direction:column; align-items:flex-start;
   text-align:start; color:var(--ink); box-shadow:var(--shadow); transition:transform .15s;}
 .sc-root .sc-cat:hover{transform:translateY(-2px);}
 .sc-root .sc-cat .ic{width:44px; height:44px; border-radius:13px; background:var(--soft); color:var(--teal);

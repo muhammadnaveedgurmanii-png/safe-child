@@ -429,6 +429,9 @@ class State(rx.State):
     def toggle_declaration(self):
         self.declaration = not self.declaration
 
+    def set_declaration(self, v: bool):
+        self.declaration = bool(v)
+
     async def on_accused_photo(self, files: list[rx.UploadFile]):
         for f in files:
             data = await f.read()
@@ -953,12 +956,13 @@ def filing_step_content():
                       "A false report can have legal consequences."),
                     class_name="sub"),
             rx.box(
-                rx.checkbox(is_checked=State.declaration,
-                            on_change=State.toggle_declaration),
+                rx.checkbox(checked=State.declaration,
+                            on_change=State.set_declaration),
                 rx.el.span(T("میں اقرار کرتا/کرتی ہوں کہ درج کردہ معلومات میرے علم کے مطابق درست ہیں۔",
-                             "I declare that the information provided is true to my knowledge.")),
+                             "I declare that the information provided is true to my knowledge."),
+                           on_click=State.toggle_declaration,
+                           style={"cursor": "pointer"}),
                 class_name="sc-check",
-                on_click=State.toggle_declaration,
             ),
         )),
         (6, case_review()),
