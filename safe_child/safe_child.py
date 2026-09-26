@@ -1,4 +1,4 @@
-"""Safe Child — Child Safety Pakistan.
+"""Safe Child – Child Safety • Pakistan.
 
 One app, two modules:
   1. Adaptive behavioral screening (rule-based expert system, NOT ML)
@@ -20,7 +20,7 @@ app = rx.App(
         ),
         rx.el.link(rel="manifest", href="/manifest.webmanifest"),
         rx.el.meta(name="theme-color", content="#2AA89B"),
-        rx.el.meta(property="og:title", content="Safe Child — Child Safety Pakistan"),
+        rx.el.meta(property="og:title", content="Safe Child – Child Safety • Pakistan"),
         rx.el.meta(
             property="og:description",
             content="Parent-facing child safety web app: adaptive behavioral screening and formal abuse-report case-file preparation. Urdu + English. Report abuse — call 1121.",
@@ -37,7 +37,7 @@ app = rx.App(
         rx.el.meta(property="og:image:width", content="1200"),
         rx.el.meta(property="og:image:height", content="627"),
         rx.el.meta(name="twitter:card", content="summary_large_image"),
-        rx.el.meta(name="twitter:title", content="Safe Child — Child Safety Pakistan"),
+        rx.el.meta(name="twitter:title", content="Safe Child – Child Safety • Pakistan"),
         rx.el.meta(
             name="twitter:description",
             content="Parent-facing child safety web app: adaptive behavioral screening and formal abuse-report case-file preparation. Urdu + English.",
@@ -54,4 +54,4 @@ app = rx.App(
     stylesheets=["/style.css"],
 )
 
-app.add_page(app_module.index, route="/", title="Safe Child — Child Safety Pakistan")
+app.add_page(app_module.index, route="/", title="Safe Child – Child Safety • Pakistan")
